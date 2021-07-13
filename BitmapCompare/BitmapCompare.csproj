@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Description>I based this tool on the SolidWorks DrawCompare tool that SW provides, but with the express focus of comparing across vault versions. At the time (if not still) there was no SW tool available for this.
+
+This tool is provided as-is with no warranty as to continued functionality or for that matter, any functionality, good or bad, that may arise during its use.
+
+Check out my GitHub to see if I'm still making stuff: https://github.com/brainynai
+Or, if you want to connect, my LinkedIn: https://www.linkedin.com/in/ianjmckenzie/</Description>
+    <Company></Company>
+    <Copyright>Copyright: Please credit me, but otherwise go nuts</Copyright>
+    <Product>McKenzie Drawing Compare O'matic</Product>
+    <Authors>Ian McKenzie</Authors>
+    <PackageId>BitmapCompare</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="EPDM.Interop.epdm">
+      <HintPath>..\..\..\..\..\..\Program Files\SOLIDWORKS Corp\SOLIDWORKS PDM\EPDM.Interop.epdm.dll</HintPath>
+    </Reference>
+    <Reference Include="EPDM.Interop.EPDMResultCode">
+      <HintPath>..\..\..\..\..\..\Program Files\SOLIDWORKS Corp\SOLIDWORKS PDM\EPDM.Interop.EPDMResultCode.dll</HintPath>
+    </Reference>
+    <Reference Include="SolidWorks.Interop.sldworks">
+      <HintPath>..\..\..\..\..\..\Program Files\SOLIDWORKS Corp\SOLIDWORKS\SolidWorks.Interop.sldworks.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
